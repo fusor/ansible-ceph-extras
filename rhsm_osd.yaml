@@ -1,0 +1,10 @@
+- hosts:
+   - osds
+  tasks:
+   - name: register
+     redhat_subscription: 
+       state: present
+       autosubscribe: true
+       org_id: Default_Organization
+       activationkey: "{{ activationkey }}"
+       server_hostname: "{{ server_hostname }}"

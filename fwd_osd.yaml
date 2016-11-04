@@ -1,0 +1,9 @@
+- hosts:
+   - osds
+  tasks:
+   - name: config_osds_firewalld 
+     firewalld:
+       port: 6800-7300/tcp
+       state: enabled
+       immediate: true
+       permanent: true

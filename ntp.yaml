@@ -1,0 +1,7 @@
+- hosts:
+   - mons
+   - osds
+  roles:
+   - role: ntp
+     ntp_config_server:
+      - "{{ ntp_host }}"

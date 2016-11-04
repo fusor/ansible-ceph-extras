@@ -1,0 +1,15 @@
+- hosts:
+   - mons
+  tasks:
+   - name: config_mons_firewalld 
+     firewalld:
+       port: 6789/tcp
+       state: enabled
+       immediate: true
+       permanent: true
+   - name: config_calamari_firewalld
+     firewalld:
+       port: 8002/tcp
+       state: enabled
+       immediate: true
+       permanent: true
